@@ -44,9 +44,7 @@ export default function App() {
     </div>
     <section className='container-section'>
     <img src={sobre} alt="" />
-    <div className="infos">
       <p>Somos uma equipe de advogados especializados em ajudar você a limpar seu nome gratuitamente. Localizados em Salvador, BA, Brasil, estamos comprometidos em fornecer soluções legais eficazes para resolver suas pendências financeiras. Conte conosco para orientação jurídica confiável e resultados positivos.</p>
-    </div>
     </section>
 
       <h1>Nossos Serviços</h1>
