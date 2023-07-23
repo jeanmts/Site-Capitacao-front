@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import api from "./services/api";
 import './App.css'
 import sobre from './assets/sobre.jpeg'
@@ -9,9 +9,9 @@ import caneta from './assets/caneta.jpeg'
 
 export default function App() {
   const [form, setForm] = useState([{ nome: '', email: '', telefone: '', cpf: ''}]);
-  const [cadastrado, setCadastrado] = useState(false)
   function handleChangeInput(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
+    
   }
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,15 +22,14 @@ export default function App() {
         const response = await api.post('cadastro',{
           ...form            
       })
-      if(response.status == 200) {
-        setCadastrado(response.data)
-      }
     } catch (error) {
       console.log(error.response)
     }
   }
 
-  
+  function refresh() {
+    setTimeout(()=> {location.reload()},1500);
+  }
   return (
     <>
     <header><h1>Limpe seu nome gratis</h1></header>
@@ -82,7 +81,7 @@ export default function App() {
       <input type="text" name='telefone' value={form.telefone} onChange={handleChangeInput}/>
       <label htmlFor="cpf">CPF</label>
       <input type="text" name='cpf' placeholder='Somente números'  value={form.cpf} onChange={handleChangeInput}/>
-      <button>Enviar</button>
+      <button onClick={()=>refresh()}>Enviar</button>
       </form>
       </div>
     </div>
