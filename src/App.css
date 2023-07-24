@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 #root {
   background-color: #0A1519;
@@ -43,24 +42,30 @@ a  {
    color: #fff;
   }
   .container-section {
-  gap: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   background-color: #fff;
-  padding: 50px 0;  
+  width: 100vw;
+  height: 700px;
+  margin-bottom: 200px; 
 }
 .container-section img {
-  width: 30%;
+  width: 40%;
   margin-left: 200px;
   border-radius: 5%;
 }
-.container-section p {
-margin-right: 200px;
-width: 70%;
-font-size: 28px;
+
+.container-sobre p {
+font-size: 26px;
 color: #0A1519;
+}
+.container-sobre {
+  gap: 100px;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  justify-content: space-between;  
 }
 h1 {
   color: #fff;
@@ -72,7 +77,7 @@ h1 {
   color: #fff;
   gap: 50px;
   font-size: 22px;
-  width: 100%;
+  max-width: 1440px;
 }
 
 .card img {
@@ -83,15 +88,18 @@ h1 {
   height: 100vh;
 }
 .container-info {
-  width: 100vw;
+  max-width: 1440px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 100px;
+  height: 100vh;
+
 }
 .fale  {
   color: #fff;
   font-size: 22px;
-  width: 30%;
+  width: 50%;
   margin-bottom: 260px;
 }
 .container-form  form{
@@ -124,8 +132,6 @@ background-color: #0A1519;
     .container-section {
       text-align: center;
       flex-direction: column;
-      padding-left: 200px;
-        width: 100vw;
       
     }
     .container-section img {
@@ -136,8 +142,11 @@ background-color: #0A1519;
       flex-direction: column;
       width:500px;
     }
-    
+    .container-sobre {
+      width: 70vw;
+    }
     .container-info {
+      width: 70vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -159,45 +168,71 @@ background-color: #0A1519;
     font-size: 20px;
   }
   .container-section {
+    height: 300px;
     text-align: center;
     flex-direction: column;
-    padding-left: 250px;
   }
   .container-section img {
     display: none;
   }
-  .container-section p {
+  .container-sobre p {
     font-size: 14px;
-    width: 150%;
+    width: 400px;
+  }
+  .titulo-servicos {
+    font-size: 32px;
+    margin-bottom: 100px;
   }
   .servicos {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
     width:400px;
-
   }
-
-  .container-info {
+.servicos img {
+  width: 300px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+}
+.card p {
+  font-size: 18px;
+}
+.card h5 {
+  margin: 20px 0;
+}
+.container-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-      width: 100vw;
+    width: 100vw;
   }
   .fale {
-    width: 55%;
+    width: 300px;
     margin-bottom: 100px;
     font-size: 20px;
-
+  }
+  .fale h1 {
+    font-size: 32px;
+  }
+  .fale p {
+    font-size: 19px;
   }
   .container-form {
     margin-right: 200px;
     margin-bottom: 100px;
   }
   .container-form input {
-    width:350px;
+    width:300px;
     height: 35px;
   }
+
+
 }

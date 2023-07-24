@@ -42,11 +42,13 @@ export default function App() {
     </div>
     </div>
     <section className='container-section'>
+      <div className='container-sobre'>
+
     <img src={sobre} alt="" />
       <p>Somos uma equipe de advogados especializados em ajudar você a limpar seu nome gratuitamente. Localizados em Salvador, BA, Brasil, estamos comprometidos em fornecer soluções legais eficazes para resolver suas pendências financeiras. Conte conosco para orientação jurídica confiável e resultados positivos.</p>
+      </div>
     </section>
-
-      <h1>Nossos Serviços</h1>
+      <h1 className='titulo-servicos'>Nossos Serviços</h1>
     <article className="servicos">
       <div className='card'>
         <img src={livros} alt="" />
